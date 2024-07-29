@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dlg88nyg31k3s"]
+
+[node name="level 2" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(10, 10)
+
+[node name="TextEdit" type="TextEdit" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.0
+offset_top = -30.0
+offset_right = 1167.0
+offset_bottom = 698.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+text = "level 2 soon
+"
+placeholder_text = "
+"
