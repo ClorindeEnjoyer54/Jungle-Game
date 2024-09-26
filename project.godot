@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="Jungle"
-run/main_scene="res://game.tscn"
+run/main_scene="res://prefabs/game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon.svg"
