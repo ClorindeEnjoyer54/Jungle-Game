@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnpjcoawb82nr"]
+
+[ext_resource type="Script" path="res://prefabs/CharacterBody2D.gd" id="1_helyw"]
+[ext_resource type="Texture2D" uid="uid://dy13a025m15tn" path="res://assets/jungle.png" id="2_bjnqe"]
+[ext_resource type="Texture2D" uid="uid://bgn1t7dhyyl1i" path="res://assets/New Piskel (10).png" id="3_8857y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaiwj"]
+size = Vector2(31, 29.5)
+
+[node name="player" type="CharacterBody2D"]
+position = Vector2(3381, 406)
+script = ExtResource("1_helyw")
+metadata/_edit_group_ = true
+
+[node name="Jungle" type="Sprite2D" parent="."]
+position = Vector2(33, 3.99997)
+scale = Vector2(0.967105, 0.535831)
+texture = ExtResource("2_bjnqe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(16.5, 17)
+scale = Vector2(0.484375, 0.46875)
+texture = ExtResource("3_8857y")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16.5, 17.25)
+shape = SubResource("RectangleShape2D_oaiwj")

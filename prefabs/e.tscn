@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://rljlrxjbkwn5"]
+
+[ext_resource type="Script" path="res://prefabs/player.gd" id="1_hc3yx"]
+[ext_resource type="Texture2D" uid="uid://dy13a025m15tn" path="res://assets/jungle.png" id="2_rft6t"]
+[ext_resource type="Texture2D" uid="uid://c4yusp3pqmgfv" path="res://assets/1.png" id="3_54bgh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwebs"]
+size = Vector2(35, 44.25)
+
+[node name="player" type="CharacterBody2D"]
+position = Vector2(-1286, 364)
+script = ExtResource("1_hc3yx")
+metadata/_edit_group_ = true
+
+[node name="Jungle" type="Sprite2D" parent="."]
+position = Vector2(-1.52588e-05, 1.49997)
+scale = Vector2(0.472039, 0.263029)
+texture = ExtResource("2_rft6t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.49999, -10.5)
+scale = Vector2(0.398437, 0.382813)
+texture = ExtResource("3_54bgh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5, -13.125)
+shape = SubResource("RectangleShape2D_iwebs")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)

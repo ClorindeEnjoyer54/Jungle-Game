@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cflwicw6nkip0"]
+
+[ext_resource type="Texture2D" uid="uid://bqhbiostimggu" path="res://assets/juvjuvghjuv.png" id="1_l78b2"]
+[ext_resource type="Script" path="res://prefabs/pool.gd" id="1_n3ps0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3lglj"]
+size = Vector2(992, 159)
+
+[node name="pool" type="Area2D"]
+position = Vector2(968, -15)
+script = ExtResource("1_n3ps0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-475, 564)
+scale = Vector2(15.5, 3.07813)
+texture = ExtResource("1_l78b2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-475, 583.5)
+shape = SubResource("RectangleShape2D_3lglj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
